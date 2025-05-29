@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skadomation Solutions - Company Profile</title>
+  <link rel="stylesheet" href="3.css" />
+   <link rel="icon" href="icon.jpg">
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="skado img.jpg" alt="Skadomation Logo">
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="1st page.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Profile</a>
+            <div class="dropdown-menu">
+              <a href="2nd page.html">About Us</a>
+              <a href="3rd page.html">Company</a>
+            </div>
+          </li>
+           <li> <a href="4th page.html">Services</a></li> 
+            
+          <li><a href="5th page.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="profile-section">
+      <h1>Company profile</h1>
+      <p><strong>Skadomation solutions</strong> headquartered in Salem , India, is a dynamic and growing engineering services startup with a strong focus on industrial automation and control systems. We specialize in the design, development, programming, and commissioning of cutting-edge automation solutions tailored to meet diverse industry needs.
+        With deep technical expertise, our team delivers end-to-end engineering services for automation systems, including AC Variable Speed Drives from design and selection to setup, site commissioning, and seamless integration with control architectures.</p>
+        <p><strong>Our mission</strong> is to deliver reliable, cost-effective solutions and comprehensive technical support to help our clients maximize the value of their investments in modern automation technologies.</p>
+        We bring proven experience working with Rockwell Automation platforms and software, along with Schneider Electric PLCs and Citect SCADA systems, enabling us to craft robust, scalable, and efficient control solutions.
+
+
+      <ul>
+        <li>Mining Crushing & Screening Plants</li>
+        <li>Mineral Processing Plants</li>
+        <li>Water and Wastewater Treatment Plants</li>
+        <li>Oil & Gas Projects</li>
+        <li>Factory & Machine Automation</li>
+      </ul>
+    </section>
+
+    <h2 class="expertise-heading">Industries We Serve</h2>
+    <section class="expertise-cards">
+      <div class="expertise-card">
+        <img src="photo.jpg" alt="Mining Crushing & Screening">
+        <h3>Mining Crushing & Screening Plants</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      </div>
+      <div class="expertise-card">
+        <img src="our.jpg" alt="Mineral Processing">
+        <h3>Mineral Processing Plants</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      </div>
+      <div class="expertise-card">
+        <img src="water.jpg" alt="Water Treatment">
+        <h3>Water and Wastewater Treatment Plants</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      </div>
+      <center>
+      <div class="expertise-card">
+        <img src="oil.jpg" alt="Oil & Gas">
+        <h3>Oil & Gas </h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      </div>
+      </center>
+    </section>
+  </main>
+
+  <div>
+     <center>
+  <div class="footer-content">
+    <h1>Contact us </h1>
+    <p>📞 +91 9731964643 | +61 401939875 </p>
+    <p> 📧 enquiry@skadomation.com</p>
+    <p>
+        <a href="5th page.html">Enquiry</a> |
+        <a href="5th page.html">View Map</a>
+    </p>
+</div>
+</center>
+  <hr>
+
+  <footer>
+    <p>&copy; 2025 Skadomation Solutions. All Rights Reserved.</p>
+  </footer>
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.3,
+  });
+
+  document.querySelectorAll('.expertise-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
+<style>
+  nav.navbar a {
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 6px;
+}
+
+nav.navbar a:hover,
+nav.navbar a:focus {
+  color: #ffffff;
+  background-color: #0099cc;
+  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.2);
+  outline: none;
+}*  {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f9fb;
+  color: #002b40;
+  line-height: 1.6;
+}
+header {
+  background: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 75px;
+  width: 350px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #002b40;
+  font-weight: 600;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #0099cc;
+}
+
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  top: 40px;
+  left: 0;
+  min-width: 150px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: #002b40;
+  text-decoration: none;
+}
+
+.navbar a:hover, .dropdown-menu a:hover {
+  color: #0099cc;
+}
+
+/* Profile Section */
+.profile-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.profile-section h1 {
+  text-align: center;
+  color: #4552A3;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.profile-section p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.profile-section ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.profile-section ul li {
+  font-size: 1em;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Expertise Section */
+.expertise-heading {
+  text-align: center;
+  margin: 40px 0 30px;
+  color: #006699;
+  font-size: 2.2em;
+  position: relative;
+}
+
+.expertise-heading::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #006699, #0099cc);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.expertise-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+
+.expertise-card:nth-child(4) {
+  grid-column: span 1; /* Takes one column */
+  
+  max-width: 100; /* Slightly wider for emphasis */
+  
+}
+
+.expertise-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.expertise-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #006699, #0099cc);
+  transition: height 0.3s ease;
+}
+
+.expertise-card:hover::before {
+  height: 8px;
+}
+
+.expertise-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.expertise-card:hover img {
+  transform: scale(1.05);
+}
+
+.expertise-card h3 {
+  font-size: 1.4em;
+  color: #006699;
+  margin-bottom: 10px;
+}
+
+.expertise-card p {
+  font-size: 0.95em;
+  color: #666;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+/* Footer Content */
+.footer-content {
+  background: #dde8ee;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 30px;
+}
+
+.footer-content h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.footer-content p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.footer-content a {
+  color: #0099cc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #002b40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .expertise-heading {
+    font-size: 2em;
+  }
+
+  .expertise-card {
+    padding: 15px;
+  }
+
+  .expertise-card img {
+    height: 150px;
+  }
+
+  .expertise-card:nth-child(4) {
+    max-width: 280px; /* Reset width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section h1 {
+    font-size: 2em;
+  }
+
+  .expertise-heading {
+    font-size: 1.8em;
+  }
+
+  .expertise-card h3 {
+    font-size: 1.2em;
+  }
+
+  .expertise-card p {
+    font-size: 0.9em;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: stretch; /* Stretch to allow logo and navbar to align to edges */
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .logo {
+    align-self: flex-start; /* Align logo to left edge */
+  }
+
+  .navbar {
+    margin-left: 0;
+    align-self: flex-end; /* Align navbar to right edge */
+    width: 100%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end; /* Align navbar items to the right */
+  }
+}
+/* Show dropdown on hover */
+.navbar ul li:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+/* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.6em;
+      color: #555;
+    }
+    .expertise-card {
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: all 1s ease;
+  will-change: transform, opacity;
+}
+
+.expertise-card.visible {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+</style>
+
+</body>
+</html>

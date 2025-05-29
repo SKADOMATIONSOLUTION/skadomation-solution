@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>skadomation solutions</title>
+  <link rel="icon" href="icon.jpg">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ece6e6;
+    }
+
+    /* Welcome Popup Style */
+    .welcome-popup {
+      position: fixed;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.6);
+      background: linear-gradient(to right, #e6ecf1, #f3f6f7);
+      color: #130000;
+      padding: 16px 30px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      z-index: 9999;
+      animation: popInTop 7s ease-out forwards, fadeOutTop 6s ease-in 5s forwards;
+    }
+
+    @keyframes popInTop {
+      0% {
+        transform: translateX(-50%) translateY(-80px) scale(0.3);
+        opacity: 0.5;
+      }
+      60% {
+        transform: translateX(-50%) translateY(10px) scale(1.05);
+        opacity: 1;
+      }
+      80% {
+        transform: translateX(-50%) translateY(-5px) scale(0.95);
+      }
+      100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fadeOutTop {
+      to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-80px) scale(0.6);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Welcome Message -->
+  <div class="welcome-popup">
+    👋 Welcome to Skadomation solutuion!
+  </div>
+
+  <script>
+    // Remove popup after animation ends (5s visible + 0.5s fade = ~6s total)
+    setTimeout(() => {
+      const popup = document.querySelector('.welcome-popup');
+      if (popup) popup.remove();
+    }, 6000);
+  </script>
+
+</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <link rel="stylesheet" href="1.css" />
+  <link rel="stylesheet" href="1..css"/>
+  <style>
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .card {
+      opacity: 0;
+      animation: popIn 0.6s ease forwards;
+    }
+    .card:nth-of-type(1) { animation-delay: 0s; }
+    .card:nth-of-type(2) { animation-delay: 0.5s; }
+    .card:nth-of-type(3) { animation-delay: 1s; }
+    .card:nth-of-type(4) { animation-delay: 1.5s; }
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+
+
+
+    <div class="container header-content">
+      <div class="logo">
+        <img src="skado img.jpeg" alt="Skadomation Logo">
+
+        
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="1st page.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Profile</a>
+            <div class="dropdown-menu">
+              <a href="2nd page.html">About Us</a>
+              <a href="3rd page.html">Company</a>
+            </div>
+          </li>
+          
+          <li>
+          <a href="4th page.html">Services</a>
+          </li>
+
+          <li><a href="5th page.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      </div>
+      </header>
+
+
+<div class="hero">
+  <div class="hero-text">
+    <p>We specialize in industrial automation solutions using PLC (Programmable Logic Controllers), SCADA (Supervisory Control and Data Acquisition), and HMI (Human-Machine Interface) technologies. Our mission is to enhance operational efficiency, reliability, and safety by delivering customized automation systems tailored to our clients' specific needs.
+           reamline operations across various industries, including manufacturing, water treatment, energy, and more.</p>
+  </div>
+    <div class="gallery-images">
+      <img src="img 4.jpg" alt="Project 1" class="box">
+      <img src="img 5.jpg" alt="Project 2" class="box">
+      <img src="img3.jpg" alt="Project 3" class="box">
+    </div>
+  </div>
+</div>
+
+    <section class="info-cards">
+      <div class="card" id="aboutus">
+        <h3>About Us</h3>
+        <p>We specialize in designing and implementing advanced control systems to enhance industrial performance and safety.</p>
+      </div>
+      <div class="card" id="companyprofile">
+        <h3>Company Profile</h3>
+        <p>Our expertise includes PLC programming, SCADA systems, and HMI interfaces for industries worldwide.</p>
+      </div>
+      <div class="card">
+        <h3>Our Services</h3>
+        <ul>
+          <li>PLC Programming</li>
+          <li>SCADA Systems</li>
+          <li>HMI Design</li>
+          <li>Industrial Integration</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Industries We Serve</h3>
+        <ul>
+          <li>Manufacturing</li>
+          <li>Oil and Gas</li>
+          <li>Water Treatment</li>
+          <li>Mining</li>
+          <li>Food Processing</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+  
+  <center>
+  <div class="footer-content">
+    <h1>Contact us </h1>
+    <p>📞 +91 9731964643 | +61 401939875 </p>
+    <p> 📧 enquiry@skadomation.com</p>
+    <p>
+        <a href="5th page.html">Enquiry</a> |
+        <a href="5th page.html">View Map</a>
+    </p>
+</div>
+</center>
+  <footer>
+    <p>&copy; 2025 Skadomation Solutions. All Rights Reserved.</p>
+  </footer>
+ 
+<style>
+
+.gallery-image{
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f9fb;
+  color: #002b40;
+  line-height: 1.6;
+}
+
+header {
+  background: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 75px;
+  width: 350px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #002b40;
+  font-weight: 600;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #0099cc;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  top: 40px;
+  left: 0;
+  min-width: 150px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 10px;
+  color: #002b40;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  color: #0099cc;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+nav.navbar a {
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 6px;
+}
+
+nav.navbar a:hover,
+nav.navbar a:focus {
+  color: #ffffff;
+  background-color: #0099cc;
+  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.2);
+  outline: none;
+}.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+/* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.6em;
+      color: #555;
+    }
+    /* Show dropdown on hover */
+.navbar ul li:hover .dropdown-menu {
+  display: block;
+}
+   .gallery-image{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Hero Section */
+.hero {
+ 
+  display:inline-flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 50px;
+  height:auto;
+  gap: 30px; /* Small gap between hero-text and gallery */
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  background: #006699;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  border: 4px solid #004466;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-text:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Gallery aligned next to hero-text */
+.gallery {
+  max-width: 450px;
+}
+
+.gallery h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.gallery-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 100px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  overflow-x: auto; /* Allows horizontal scroll if content overflows */
+}
+
+
+.box {
+  width:400px;
+  height:300px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #eaf5f7;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #004466;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.contact-section {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-section a {
+  color: #006699;
+  text-decoration: none;
+}
+footer {
+  background-color: #002b40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-content {
+  background-color: #ffffff;
+  color: #002b40;
+  padding: 40px 20px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+
+footer {
+  background-color: #002b40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+/* Show dropdown on hover */
+.navbar ul li:hover .dropdown-menu {
+  display: block;
+}
+
+/* Prevent it from disappearing when hovering on the dropdown itself */
+
+    </style>
+</body>
+</html>

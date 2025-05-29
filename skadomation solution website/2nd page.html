@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skadomation Solutions - Profile</title>
+  <link rel="icon" href="icon.jpg">
+  <link rel="stylesheet" href="2.css" />
+</head>
+<body>
+
+  <body>
+
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="skado img.jpeg" alt="Skadomation Logo">
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="1st page.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Profile</a>
+            <div class="dropdown-menu">
+              <a href="2nd page.html">About Us</a>
+              <a href="3rd page.html">Company</a>
+            </div>
+          </li>
+           <li> <a href="4th page.html">Services</a></li> 
+            
+          <li><a href="5th page.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+     
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p>Welcome to our Profile page. Learn about our mission, vision, and technologies that drive industrial innovation.</p>
+      </div>
+    </section>
+
+    <section class="info-cards cards-animated">
+      <div class="card" id="mission">
+        <h3>Our Mission</h3>
+        <p>To deliver cutting-edge automation solutions that enhance efficiency and sustainability across industries.</p>
+      </div>
+      <div class="card" id="vision">
+        <h3>Our Vision</h3>
+        <p>To be a global leader in industrial automation by driving innovation and engineering excellence.</p>
+      </div>
+      <div class="card">
+        <h3>24/7 Support</h3>
+        <p>Our engineers provide real-time support, ensuring reliability and minimal downtime for your operations.</p>
+      </div>
+      <div class="card">
+        <h3>Our Objective</h3>
+        <p>We aim to create tailored smart automation environments for various industries worldwide.</p>
+      </div>
+    </section>
+
+    <section class="gallery" id="automation">
+      
+      <div class="gallery-images">
+        <img src="img6.jpg">
+        <img src="img7.jpg" >
+        <img src="img8.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="info-cards" id="technologies">
+  <div class="card animate-from-left">
+  <h3>Industries We Serve</h3>
+  <ul>
+    <li>Manufacturing</li>
+    <li>Oil & Gas</li>
+    <li>Water Treatment</li>
+    <li>Power Plants</li>
+    <li>Food & Beverage</li>
+  </ul>
+</div>
+
+<div class="card animate-from-right">
+  <h3>Technologies We Use</h3>
+  <ul>
+    <li>PLC Programming</li>
+    <li>SCADA / HMI Design</li>
+    <li>Industrial IoT (IIoT)</li>
+    <li>Remote Monitoring</li>
+    <li>Sensor Integration</li>
+  </ul>
+</div>
+
+</section>
+
+
+  </main>
+
+   <center>
+  <div class="footer-content">
+    <h1>Contact us </h1>
+    <p>📞 +91 9731964643 | +61 401939875 </p>
+    <p> 📧 enquiry@skadomation.com</p>
+    <p>
+        <a href="5th page.html">Enquiry</a> |
+        <a href="5th page.html">View Map</a>
+    </p>
+</div>
+</center>
+  <footer>
+    <p>&copy; 2025 Skadomation Solutions. All Rights Reserved.</p>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const allCards = document.querySelectorAll(".card");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        const el = entry.target;
+        if (entry.isIntersecting) {
+          if (el.classList.contains("fade-in")) {
+            // Fade-in (first 4 cards): delay based on index
+            setTimeout(() => el.classList.add("visible"), index * 500);
+          } else {
+            el.classList.add("visible");
+          }
+        } else {
+          el.classList.remove("visible"); // So animation can repeat
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    allCards.forEach(card => observer.observe(card));
+  });
+</script>
+
+
+<script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+
+  function checkAnimation() {
+    const contactSection = document.querySelector('.footer-content');
+    if (isInViewport(contactSection)) {
+      contactSection.classList.add('animate-fade-in');
+      window.removeEventListener('scroll', checkAnimation);
+    }
+  }
+
+  window.addEventListener('scroll', checkAnimation);
+  window.addEventListener('load', checkAnimation);
+</script>
+<style>
+      .card:hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 40px rgba(0, 0, 0, 0.35);
+      }
+      nav.navbar a {
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 6px;
+}
+
+nav.navbar a:hover,
+nav.navbar a:focus {
+  color: #ffffff;
+  background-color: #0099cc;
+  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.2);
+  outline: none;
+}@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+  * {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f9fb;
+  color: #002b40;
+  line-height: 1.6;
+}
+
+header {
+  background: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 75px;
+  width: 350px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #002b40;
+  font-weight: 600;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #0099cc;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  top: 40px;
+  left: 0;
+  min-width: 150px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 10px;
+  color: #002b40;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  color: #0099cc;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  text-align: center;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  background: #006699;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  border: 4px solid #004466;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  max-width: 1800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  line-height: 1.8;
+}
+
+.hero-text:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  line-height: 1.8;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-images img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Cards */
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #eaf5f7;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  width: 280px;
+  transition: transform 0.3s ease;
+  line-height: 1.8;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #004466;
+  line-height: 1.5;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 10px;
+  line-height: 1.8;
+}
+
+/* Footer */
+footer {
+  background-color: #002b40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-content {
+  background-color: #ffffff;
+  color: #002b40;
+  padding: 40px 20px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.footer-content a {
+  color: #006699;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+/* Show dropdown on hover */
+.navbar ul li:hover .dropdown-menu {
+  display: block;
+}
+
+/* Prevent it from disappearing when hovering on the dropdown itself */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply slideInRight with staggered delay */
+.cards-animated .card {
+  opacity: 0; /* ensure hidden before animation */
+  animation: slideInRight 1s ease forwards;
+}
+
+.cards-animated .card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.cards-animated .card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.cards-animated .card:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.cards-animated .card:nth-child(4) {
+  animation-delay: 1.2s;
+}
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.gallery-images img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInUp 1s ease forwards;
+}
+
+.gallery-images img:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.gallery-images img:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.gallery-images img:nth-child(3) {
+  animation-delay: 0.9s;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Initial state: hidden and slightly shifted down */
+.card {
+  opacity: 0;
+  transform: translateX(100px); /* or -100px based on direction */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.card.animate-from-left {
+  transform: translateX(-100px);
+}
+
+.card.animate-from-right {
+  transform: translateX(100px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Initial hidden state for contact section */
+.footer-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease 0.5s;
+}
+
+/* Animated visible state */
+.footer-content.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.6em;
+      color: #555;
+    }
+
+</style>
+
+
+
+</body>
+</html>

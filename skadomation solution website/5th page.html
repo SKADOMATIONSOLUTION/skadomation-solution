@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skadomation Solutions  </title>
+  <link rel="icon" href="icon.jpg">
+  <style>
+
+    /* ===== Page Fade-in Animation ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f9fb;
+  color: #002b40;
+  line-height: 1.6;
+}
+
+header {
+  background: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 75px;
+  width: 350px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #002b40;
+  font-weight: 600;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #0099cc;
+}
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.6em;
+      color: #555;
+    }
+nav.navbar a {
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 6px;
+}
+
+nav.navbar a:hover,
+nav.navbar a:focus {
+  color: #ffffff;
+  background-color: #0099cc;
+  box-shadow: 0 4px 10px rgba(0, 153, 204, 0.2);
+  outline: none;
+}
+   .gallery-image{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+    .dropdown-menu {
+      position: absolute;
+      top: 42px;
+      left: 0;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      min-width: 160px;
+      border-radius: 8px;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 8px 20px;
+      color: #002b40;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus {
+      background-color: #e0f0ff;
+      outline: none;
+    } 
+    .navbar ul li:hover .dropdown-menu {
+  display: block;
+}
+
+/* Prevent it from disappearing when hovering on the dropdown itself */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+/* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.6em;
+      color: #555;
+    }
+    .form-wrapper {
+      display: flex;
+      gap: 40px;
+      max-width: 1200px;
+      padding: 20px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    /* Info text */
+    .info-text {
+      flex: 1 1 55%;
+      animation: slideInLeft 1s ease-in-out;
+    }
+
+    .info-text h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 32px;
+      color: #4552A3;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .info-text h3 {
+      font-weight: 500;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .info-text h4 {
+      margin-bottom: 6px;
+      color: #007BFF;
+    }
+
+    .info-text p {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .info-text a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .info-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* Form container */
+    .form-container {
+      flex: 0 0 450px;
+      padding-left: 20px;
+      animation: slideInRight 1s ease-in-out;
+    }
+
+    .form-container h2 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: #333;
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    /* Form groups */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fefefe;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #007BFF;
+      box-shadow: 0 0 12px rgba(0,123,255,0.2);
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    /* Submit button */
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    /* ===== Animations for form and info ===== */
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* ===== Social Links ===== */
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #0077b5;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .social-link:hover {
+      color: #005582;
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-link:hover .social-icon {
+      transform: scale(1.2);
+    }
+    .one{
+         color: rgb(235, 234, 238);
+
+    }
+
+    /* ===== Map container ===== */
+    .map-container {
+      width: 80%;
+      margin: 40px auto 0 auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      text-align: center;
+      padding: 8px 0;
+      margin-top: 20px;
+      color: #ffffff;
+      background-color:  #002b40;
+      font-size: 14px;
+      border-top: 1px solid #ddd;
+    }
+    /* Show dropdown on hover */
+
+
+/* Prevent it from disappearing when hovering on the dropdown itself */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+  /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.6em;
+      color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+
+
+
+    <div class="container header-content">
+      <div class="logo">
+        <img src="skado img.jpeg" alt="Skadomation Logo">
+
+        
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="1st page.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Profile</a>
+            <div class="dropdown-menu">
+              <a href="2nd page.html">About Us</a>
+              <a href="3rd page.html">Company</a>
+            </div>
+          </li>
+          
+          <li>
+          <a href="4th page.html">Services</a>
+          </li>
+
+          <li><a href="5th page.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      </div>
+      </header>
+  <!-- Main content -->
+  <div class="form-wrapper">
+    <div class="info-text">
+      <h2>Contact Us</h2>
+      <h3>At Skadomation Solution, we specialize in delivering expert support and tailored engineering services to maximize the performance of your Automation & Control Systems and Variable Speed Drives.</h3>
+      
+      <h4>Visit Us:</h4>
+      <p> H-19,Jeevan Nagar,<br>Thermal Four roads,<br>Mettur dam,<br>Salem - 638401,<br>Tamilnadu.
+      </p>
+      
+      <h4>Connect with us:</h4>
+      <p>
+        <a href="https://www.linkedin.com/company/skadomation-solution" target="_blank" class="social-link">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social-icon" />
+          LinkedIn
+        </a>
+      </p>
+      
+      <h4>Contact Information:</h4>
+      <p>
+        Phone:+91 9731964643 | +61 401939875<br />
+        Email: <a href="mailto:sales@skadomationsolution.com.au"> enquiry@skadomation.com </a><br />
+        Website: <a href="http://www.skadomationsolution.com.au" target="_blank" rel="noopener">www.skadomation.com</a>
+      </p>
+    </div>
+
+    <div class="form-container">
+      <form id="my-form" action="https://formspree.io/f/movdoook" method="POST">
+    <label>
+      Name:
+      <input type="text" name="name" required>
+    </label><br><br>
+    <label>
+      age:
+      <input type="number" name="age" required>
+    </label><br><br>
+
+    <label>
+      Email:
+      <input type="email" name="email" required>
+    </label><br><br>
+
+    <label>
+      Message:
+      <textarea name="message" required></textarea>
+    </label><br><br>
+
+    <button type="submit">Submit</button>
+    <p id="form-status"></p>
+  </form>
+    </div>
+  </div>
+
+   
+
+  <!-- Full-width Google Map -->
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d424.801894358099!2d77.79640910248624!3d11.772268115490055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sjeeva%20nagar%20mettur!5e1!3m2!1sen!2sin!4v1748255569263!5m2!1sen!2sin" 
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Skadomation Solution. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll-triggered map fade-in script -->
+  <script>
+    const map = document.querySelector('.map-container');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          map.style.opacity = '1';
+          map.style.transform = 'translateY(0)';
+          observer.unobserve(map);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(map);
+  </script>
+   <script>
+    const form = document.getElementById("my-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        status.textContent = "";
+        status.style.color = "green";
+        form.reset();
+      } else {
+        status.textContent = "Oops! There was a problem submitting your form.";
+        status.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
